@@ -1,6 +1,7 @@
 /*
-	# Warmth : the wedding device
-	- by SeungBum Kim <picxenk@gmail.com>
+	# Warmth : light device for warmth
+        - https://github.com/PROTOROOM/Warmth
+	- by SeungBum Kim & Hoonida Kim
 	- Artistic License 2.0  http://choosealicense.com/licenses/artistic-2.0/
 	
 */
