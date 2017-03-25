@@ -15,15 +15,19 @@ int readIndex = 0;
 int total = 0;
 int average = 0;
 int current = 0;
+int oldTemp = 0;
+
 boolean triggered = false;
+boolean isStarting = true;
 
 long pTime = 0;
 long cTime = 0;
 int fade = 20;
 int brightness = 0;
 int pulseCount = 0;
-int minValue = 30;
+int minValue = 0;
 int defaultValue = 130;
+int threshold = 5;
 
 void setup() {                
   pinMode(analogOutput, OUTPUT);
@@ -36,42 +40,58 @@ void setup() {
 // ##########################  MAIN  ##########################
 void loop() {
 
-//  current = analogRead(analogInput);
   current = readSmooth();
   cTime = millis();
-  
-//  beatPulse(60);
+
 
   if (triggered) {
-//    beatPulse(60);
+    
+    if (isStarting) {
+      for (;brightness<256;brightness+=1) {
+        writeValue(brightness);
+        delay(10);
+      }
+      delay(1000);      
+      isStarting = false;
+    }
+
     for (int i=0; i<5; i++) {
       beatPulse2(40);
     }
     
-    for (;brightness < defaultValue; brightness+=2) {
-      writeValue(brightness);
-      delay(20);
+    if (!isIncreasing()) {
+      for (;brightness < defaultValue; brightness+=2) {
+        writeValue(brightness);
+        delay(20);
+      }    
+      triggered = false;
+      isStarting = true;
     }
-    triggered = false;
-
-//    if (pulseCount > 7) {
-//      triggered = false;
-//    }
 
   } else {
-
     
     writeValue(brightness);
-//    if (brightness > 150) brightness--;
     
-    if ((current - average) > 10) {
+    if ((current - average) > threshold && isIncreasing()) {
       triggered = true;
       pulseCount = 0;
     }
 
   }
 
+}
 
+
+// ##########################  Commands  ##########################
+boolean isIncreasing() {
+  boolean result = false;
+  if (cTime - pTime > 200) {
+    pTime = cTime;
+    if (current > oldTemp) result = true;
+    oldTemp = current;
+  }
+  
+  return result;
 }
 
 
@@ -91,10 +111,11 @@ void beatPulse(int beat) {
   }
 }
 
+
 void beatPulse2(int beat) {
 //  brightness = 0;
-  for (;brightness<255;brightness+=15) {
-    writeValue(brightness);
+  for (;brightness<=255;brightness+=10) {
+    writeValue(min(255, brightness));
     delay(1000/beat);
   }
   for (;brightness>minValue; brightness-=5) {
@@ -119,6 +140,7 @@ void averageTemp(boolean withLight) {
   }
   average = t / n;
 }
+
 
 int readSmooth() {
   total = total - readings[readIndex];
