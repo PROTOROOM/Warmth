@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2017-03-29 Wed 18:23 -->
+<!-- 2017-03-29 Wed 19:08 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Story of Warmth</title>
@@ -237,22 +237,30 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org16b36c6">1. Warmth is</a></li>
-<li><a href="#orga8efaec">2. 이야기의 시작</a></li>
-<li><a href="#orgb7190ea">3. Dirty Sketches</a></li>
-<li><a href="#org9f4bea6">4. 실험과 제작</a></li>
-<li><a href="#orge317e01">5. 친구들의 도움</a></li>
-<li><a href="#org4b97d0f">6. 설치와 퍼포먼스</a></li>
+<li><a href="#orgd7603a7">1. Warmth is</a></li>
+<li><a href="#org9615971">2. 이야기의 시작</a></li>
+<li><a href="#orgacf58e3">3. Dirty Sketches</a></li>
+<li><a href="#org679c6fe">4. 실험과 프로토타이핑</a>
+<ul>
+<li><a href="#org4c18c6e">4.1. 아크릴 실험</a></li>
+<li><a href="#org8c0b0db">4.2. PCB 조각</a></li>
+</ul>
+</li>
+<li><a href="#org4ecd936">5. 제작 &amp; 친구들의 도움</a></li>
+<li><a href="#orge916a37">6. 설치와 퍼포먼스</a></li>
+<li><a href="#orgeb494af">7. 설계도와 소스코드</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org16b36c6" class="outline-2">
-<h2 id="org16b36c6"><span class="section-number-2">1</span> Warmth is</h2>
+<div id="outline-container-orgd7603a7" class="outline-2">
+<h2 id="orgd7603a7"><span class="section-number-2">1</span> Warmth is</h2>
 <div class="outline-text-2" id="text-1">
 <p>
-  Warmth는 2017년 4월 1일 영지와 데릭의 결혼을 축복해주기 위해 PROTOROOM이 만든 장치입니다.
-결혼식 후 보스톤 과학 박물관에서 진행된 리셉션에서 하객들을 위한 Place Card<label for="1" class="margin-toggle sidenote-number"></label><input type="checkbox" id="1" class="margin-toggle"/><span class="sidenote">
+  Warmth는 2017년 4월 1일 영지와 데릭의 결혼<label for="1" class="margin-toggle sidenote-number"></label><input type="checkbox" id="1" class="margin-toggle"/><span class="sidenote">
+<a href="http://derrick-youngji.com">http://derrick-youngji.com</a>
+</span> 을 축복해주기 위해 PROTOROOM이 만든 장치입니다.
+결혼식 후 보스톤 과학 박물관에서 진행된 리셉션에서 하객들을 위한 Place Card<label for="2" class="margin-toggle sidenote-number"></label><input type="checkbox" id="2" class="margin-toggle"/><span class="sidenote">
 미국의 결혼식에서는 리셉션 자리가 따로 있군요. 하객들이 앉아야 할 자리에 이름표를 붙여주는 데
 이를 Place Card라고 하나봅니다. 
 </span>로 사용이 되었습니다.
@@ -272,31 +280,117 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-orga8efaec" class="outline-2">
-<h2 id="orga8efaec"><span class="section-number-2">2</span> 이야기의 시작</h2>
+<div id="outline-container-org9615971" class="outline-2">
+<h2 id="org9615971"><span class="section-number-2">2</span> 이야기의 시작</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+  PROTOROOM의 김승범에게는 영지라는 여동생이 있습니다. 오랜 시간 미국에서 유학생활을 했고,
+이제는 데릭을 만나 새로운 인생의 출발을 하게 되었습니다. 동생이지만 삶의 동료로서 PROTOROOM을 
+항상 지지해주고 관심을 가져주는 영지를 위해 후니다 킴과 김승범은 기억에 남는 선물을 주고 싶었습니다.
+</p>
+
+<p>
+  리셉션의 장소가 보스턴 과학 박물관인지라, 그리고 영지도 어떤 geek한, 그리고 PROTOROOM의 작업으로
+어울릴만한 무언가가 있으면 좋겠다는 생각을 계속 해왔습니다. 몇 가지 엉뚱한 아이디어들이 오고 갔지만
+시간은 계속 흘러 행사일이 다가오게 되었고, Place Card로 좁혀지게 되었습니다.
+</p>
+
+<p>
+  실은 앞으로 PROTOROOM에서 실험하게 될 작품의 Building Block을 쌓는다는 느낌으로 RF 기반의 사람들 간에
+상호작용을 일으킬 수 있는 장치를 만들어볼까 생각도 했습니다만 몇 가지 예측하기 힘든 요소들로
+사전 테스팅 없이 처음 가는 장소<label for="3" class="margin-toggle sidenote-number"></label><input type="checkbox" id="3" class="margin-toggle"/><span class="sidenote">
+어떤 설치나 워크숍을 위해 사전에 장소를 방문하고 환경적 제약들을 파악하는 것은 매우 중요하죠.
+거의 예측이 가능한 곳이어도 처음 방문하는 장소에서는 항상 이상한 문제들이 발생하더라고요. 
+특히 RF와 같은 무선을 다룰 때에는, 그것도 제작 장소와 다른 나라에서 해본다는 것은 여러 제약이 
+있을거 같더군요.
+</span>에서 실험하기에는 무리가 있다 판단을 했습니다.
+</p>
+
+<p>
+최종적으로 영지와 데릭은 새로운 Place Card로써 몇 가지 요구사항을 던져주었습니다.
+</p>
+<ul class="org-ul">
+<li>Place Card의 원래 기능에 충실해야 함, 이름이 잘 보여야겠지</li>
+<li>테이블 위에 세울 수 있어야 함</li>
+<li>뭐랄까 3D 프린터나 레이저컷 등등 뭔가 geek한 특징이 있으면 좋겠음 :)</li>
+<li>하객들에게 일종의 기념 선물이 되면 좋겠음</li>
+</ul>
 </div>
-<div id="outline-container-orgb7190ea" class="outline-2">
-<h2 id="orgb7190ea"><span class="section-number-2">3</span> Dirty Sketches</h2>
 </div>
-<div id="outline-container-org9f4bea6" class="outline-2">
-<h2 id="org9f4bea6"><span class="section-number-2">4</span> 실험과 제작</h2>
+
+
+<div id="outline-container-orgacf58e3" class="outline-2">
+<h2 id="orgacf58e3"><span class="section-number-2">3</span> Dirty Sketches</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+  PROTOROOM은 컴퓨팅 매체에 대한 어떤 개념들을 담기 위해 하드웨어와 소프트웨어를 이용한 키트를
+만들어왔습니다. 이번처럼 리셉션 이벤트의 Place Card라는 구체적인 목적을 충족시키는 작업은 처음인데요,
+일정 상 3D 프린터 기반보다는 아크릴컷을 기본 형태로 가기로 했고, 따뜻한 인터렉션을 만들 수 있는 
+무언가를 생각하게 되었습니다.
+</p>
+
+
+<div class="figure">
+<p><img src="./img/warmth01.jpg" alt="warmth01.jpg" />
+</p>
 </div>
-<div id="outline-container-orge317e01" class="outline-2">
-<h2 id="orge317e01"><span class="section-number-2">5</span> 친구들의 도움</h2>
+
+<p>
+  기존에 작업실에 있던 아크릴 조각과 예전에 후니다님이 제작한 PCB, 집에 굴러다니는 면봉으로
+Place Card 더티 하드웨어 스케치를 해봤습니다. 대충 개념적으로 이런 모습이 되면 전자 장치 기반의
+Place Card가 되지 않을까?하고요.
+</p>
 </div>
-<div id="outline-container-org4b97d0f" class="outline-2">
-<h2 id="org4b97d0f"><span class="section-number-2">6</span> 설치와 퍼포먼스</h2>
+</div>
+
+<div id="outline-container-org679c6fe" class="outline-2">
+<h2 id="org679c6fe"><span class="section-number-2">4</span> 실험과 프로토타이핑</h2>
+<div class="outline-text-2" id="text-4">
+</div><div id="outline-container-org4c18c6e" class="outline-3">
+<h3 id="org4c18c6e"><span class="section-number-3">4.1</span> 아크릴 실험</h3>
+<div class="outline-text-3" id="text-4-1">
+
+<div class="figure">
+<p><img src="./img/warmth02.png" alt="warmth02.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org8c0b0db" class="outline-3">
+<h3 id="org8c0b0db"><span class="section-number-3">4.2</span> PCB 조각</h3>
+</div>
+</div>
+
+<div id="outline-container-org4ecd936" class="outline-2">
+<h2 id="org4ecd936"><span class="section-number-2">5</span> 제작 &amp; 친구들의 도움</h2>
+</div>
+<div id="outline-container-orge916a37" class="outline-2">
+<h2 id="orge916a37"><span class="section-number-2">6</span> 설치와 퍼포먼스</h2>
+</div>
+<div id="outline-container-orgeb494af" class="outline-2">
+<h2 id="orgeb494af"><span class="section-number-2">7</span> 설계도와 소스코드</h2>
 </div>
 <!-- Footnotes --><!-- 
 <div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">
+<a href="http://derrick-youngji.com">http://derrick-youngji.com</a>
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2">2</a></sup> <div class="footpara"><p class="footpara">
 미국의 결혼식에서는 리셉션 자리가 따로 있군요. 하객들이 앉아야 할 자리에 이름표를 붙여주는 데
 이를 Place Card라고 하나봅니다. 
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.3" class="footnum" href="#fnr.3">3</a></sup> <div class="footpara"><p class="footpara">
+어떤 설치나 워크숍을 위해 사전에 장소를 방문하고 환경적 제약들을 파악하는 것은 매우 중요하죠.
+거의 예측이 가능한 곳이어도 처음 방문하는 장소에서는 항상 이상한 문제들이 발생하더라고요. 
+특히 RF와 같은 무선을 다룰 때에는, 그것도 제작 장소와 다른 나라에서 해본다는 것은 여러 제약이 
+있을거 같더군요.
 </p></div></div>
 
  --></div>
 <div id="postamble" class="status">
 <p class="author">Author: PROTOROOM</p>
-<p class="date">Created: 2017-03-29 Wed 18:23</p>
+<p class="date">Created: 2017-03-29 Wed 19:08</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
