@@ -1,0 +1,24 @@
+#+TITLE: Story of Warmth
+#+SUBTITLE: The wedding device for Young Ji & Derrick
+#+AUTHOR: PROTOROOM
+#+HTML_HEAD: <link rel="stylesheet" href="css/tufte.css" type="text/css" />
+
+* Warmth is
+
+  Warmth는 2017년 4월 1일 영지와 데릭의 결혼을 축복해주기 위해 PROTOROOM이 만든 장치입니다.
+결혼식 후 보스톤 과학 박물관에서 진행된 리셉션에서 하객들을 위한 Place Card[fn:1]로 사용이 되었습니다.
+아크릴에 각인된 하객의 이름이 LED에 의해 빛이 나며 따뜻한 입김을 불어 넣으면 박동합니다.
+
+[[./img/warmth00.jpg]]
+
+  - 제작 : PROTOROOM (SeungBum Kim & Hoonida Kim)
+  - 여러 친구들의 조언과 도움이 함께 했습니다. :)
+
+[fn:1] 미국의 결혼식에서는 리셉션 자리가 따로 있군요. 하객들이 앉아야 할 자리에 이름표를 붙여주는 데
+이를 Place Card라고 하나봅니다. 
+
+* 이야기의 시작
+* Dirty Sketches
+* 실험과 제작
+* 친구들의 도움
+* 설치와 퍼포먼스
