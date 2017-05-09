@@ -29,7 +29,7 @@
              font-style: normal; }
 
 /* Tufte CSS styles */
-html { font-size: 15px; }
+html { font-size: 14px; }
 
 body { width: 87.5%;
        margin-left: auto;
@@ -89,7 +89,7 @@ section { padding-top: 1rem;
 
 p, ol, ul { font-size: 1.4rem; }
 
-p { line-height: 2rem;
+p { line-height: 2.2rem;
     margin-top: 1.4rem;
     margin-bottom: 1.4rem;
     padding-right: 0;
