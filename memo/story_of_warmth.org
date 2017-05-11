@@ -172,8 +172,21 @@ MIT 채플에서의 결혼식 후, 리셉션은 보스톤 과학 박물관에서
   
 기타 Warmth 프로젝트와 관련된 문의사항은 PROTOROOM으로 부탁드립니다.
 
+- Warmth, the lighting place card.
+- by [[http://protoroom.kr][PROTOROOM (SeungBum Kim & Hoonida Kim)]]
+
 [fn:art] https://choosealicense.com/licenses/artistic-2.0 개인적으로 좋아하는 라이선스입니다.
 코드에서의 시적허용이라니, 너무 멋지지 않나요?
 
 [fn:cc] https://creativecommons.org/licenses/by-sa/3.0/legalcode
 
+
+* 도움을 주신 분들
+Warmth가 만들어지기까지 크고 작은 도움을 주신 분들입니다. 감사합니다. :)
+
+ - 헬로긱스 : 레이저커터를 지원해주셨습니다.
+   - 강병수 : 레이저커터 셋업 및 아크릴 제작을 위한 도움을 주셨습니다.
+   - 김병월 : 프로토타이핑 시의 부품 및 기술적 디자인에 대한 조언을 주셨습니다.
+ - 정다운 : 장치 납땜 및 조립을 도와주셨습니다.
+ - 김은지 : 장치 지지대 부품 제작을 도와주셨습니다.
+ - 박동희 : 하드웨어 부품 관련 조언을 주셨습니다.
