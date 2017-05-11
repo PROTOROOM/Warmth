@@ -1,8 +1,9 @@
 # Warmth
-The lighting place card
+The lighting place card for YoungJi & Derrick's wedding
   - PROTOROOM 
-  - by SeungBum & Hoonida
-
+  - by SeungBum Kim & Hoonida Kim
+  - 2017.04.01
+  
 ![design v1.2](img/design.png)
 
 이 프로젝트의 이야기는 다음 웹페이지에서 읽어볼 수 있습니다.
