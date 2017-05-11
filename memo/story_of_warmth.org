@@ -170,6 +170,8 @@ MIT 채플에서의 결혼식 후, 리셉션은 보스턴 과학 박물관에서
 * 설계도와 소스코드
 영지와 데릭의 결혼을 축복하고자 만든 PROTOROOM의 Warmth는 오픈소스로 공개를 합니다.
 
+[[../img/design.png]]
+
 저장소는 다음과 같으며, 펌웨어 코드는 Artistic License 2.0 [fn:art] 을 하드웨어 회로와 기타 자료에
 대해서는 Creative Commons Attribution ShareAlike 3.0 [fn:cc] 라이선스를 따릅니다.
 
